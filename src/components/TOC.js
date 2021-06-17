@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 
 class TOC extends Component {
+    //가장먼저 shouldComponentUpdate 실행함
+    //다음props 와 현재 props를 비교해 렌더링 할지 말지 정해줌
+    shouldComponentUpdate(newProps, newState) {
+        console.log('===> TOC shouldComponentUpdate')
+        if(this.props.data === newProps.data) {
+            return false;
+        }
+        return true;
+    }
     render() {
         var lists = [];
         var data = this.props.data;
