@@ -103,6 +103,9 @@ class App extends Component {
 
     return (
       <div className="App">
+        <header className="App-header">
+          <h1>React App!!</h1>
+        </header>
         <Subject 
           title={this.state.subject.title} 
           sub={this.state.subject.sub}
